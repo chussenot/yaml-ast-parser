@@ -17,7 +17,7 @@ The type information below is relevant when using TypeScript, if using from Java
 ### YAMLNode
 `YAMLNode` class is an ancestor for all node kinds.
 It's `kind` field determine node kind, one of `Kind` enum:
-  * `SCALAR`, `MAPPING`, `MAP`, `SEQ`, `ANCHOR_REF` or `INCLUDE_REF`.
+  * `SCALAR`, `MAPPING`, `MAP`, `SEQ`, `ANCHOR_REF`, `INCLUDE_REF` or `REFERENCE_REF`.
  
 After node kind is determined, it can be cast to one of the `YAMLNode` descendants types:
  * `YAMLScalar`, `YAMLMapping`, `YamlMap`, `YAMLSequence` or `YAMLAnchorReference`.

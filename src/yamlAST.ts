@@ -9,7 +9,8 @@ export enum Kind{
     MAP,
     SEQ,
     ANCHOR_REF,
-    INCLUDE_REF
+    INCLUDE_REF,
+    REFERENCE_REF
 }
 
 export interface YAMLDocument {
