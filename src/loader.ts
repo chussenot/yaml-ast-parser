@@ -1574,7 +1574,15 @@ function composeNode(state:State, parentIndent, nodeContext, allowToSeek, allowC
   }
 
   if (null !== state.tag && '!' !== state.tag) {
-    if (state.tag=="!include"){
+    if (state.tag == "!reference") {
+      if (!state.result) {
+        state.result = ast.newScalar();
+        state.result.startPosition = state.position;
+        state.result.endPosition = state.position;
+        throwError(state, "!reference without value");
+      }
+      state.result.kind = ast.Kind.REFERENCE_REF;
+    } else if (state.tag=="!include"){
         if (!state.result){
             state.result=ast.newScalar();
             state.result.startPosition=state.position;
