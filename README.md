@@ -8,6 +8,7 @@ In additional to parsing YAML to AST, it has following features:
 
 * restoration after the errors and reporting errors as a part of AST nodes.
 * built-in support for `!include` tag used in RAML
+* built-in support fot `!reference` tag used in Gitlab CI.
 
 ## Usage
 The type information below is relevant when using TypeScript, if using from JavaScript only the field/method information is relevant.
