@@ -227,6 +227,10 @@ function writeScalar(state, object, level) {
     state.dump=""+object;//FIXME
     return;
   }
+  if (object.indexOf("!reference")==0){
+    state.dump=""+object;//FIXME
+    return;
+  }
   if (object.indexOf("!$$$novalue")==0){
     state.dump="";//FIXME
     return;
